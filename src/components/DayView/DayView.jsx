@@ -28,7 +28,8 @@ function DayView(){
         <div className="dayViewWrapper">
             {answers.map((answer => {
                 return(
-                    <Answer key={answer.id} answer={answer.answer} explanation={answer.explanation} username={answer.username} />
+                    // <Answer key={answer.id} answer={answer.answer} explanation={answer.explanation} username={answer.username} />
+                    <Answer className="answerbox" answer = {answer.answer}/>
                 )
             }))}
 
