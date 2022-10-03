@@ -1,7 +1,10 @@
 import './Timeline.css'
+import DayView from '../DayView/DayView'
+
 function Timeline(){
     return(
-        <div className="wrapper">
+        <div className="timeLineWrapper">
+            <DayView />
 
         </div>
 
