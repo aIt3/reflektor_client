@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import './InputWindow.css'
@@ -7,21 +7,24 @@ const API_URL = "http://localhost:5005";
 
 function InputWindow(){
     const [answer, setAnswer] = useState('')
+    const [question, setQuestion] = useState('')
+    console.log(question)
+    const storedToken = localStorage.getItem('authToken')
 
     const navigate = useNavigate();
 
 
     const handleAnswer = (e) => setAnswer(e.target.value);
 
+    // PROCESS THE ANSWER
     const handlePost = e => {
         e.preventDefault();
 
         const requestBody = { answer };
      
-        // Make an axios request to the API
-        // If POST request is successful redirect to login page
-        // If the request resolves with an error, set the error message in the state
-        axios.post(`${API_URL}/api/answers`, requestBody)
+        axios.post(`${API_URL}/api/answers`, requestBody,
+        {headers: {Authorization: `Bearer ${storedToken}`}}
+        )
           .then((response) => {
             navigate('/');
           })
@@ -29,13 +32,23 @@ function InputWindow(){
             const errorDescription = error.response.data.message;
             // setErrorMessage(errorDescription);
           })
-
-
     }
+    
+    // GET THE QUESTION OF THE DAY
+    const getTodaysQuestion = () => { 
+        axios
+          .get(`${API_URL }/api/questions/today`)
+          .then((response) => setQuestion(response.data))
+          .catch((error) => console.log(error));
+      };
+      useEffect(() => { 
+        getTodaysQuestion();
+      }, [] );
+
     return(
         <div className='wrapper'>
             <div className='question'>
-                <h1>Welches Lied erinnert dich an deinen Vater?</h1>
+                <h1>{question[0].question}</h1>
             </div>
             <form onSubmit={handlePost}>
                 <textarea  

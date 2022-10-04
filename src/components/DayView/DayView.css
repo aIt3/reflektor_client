@@ -5,3 +5,36 @@
     flex-wrap: wrap;
     flex-direction: row;
 }
+.editDelete{
+    width:210px;
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+
+.editDelete button{
+    width:30px;
+    font-size:11px;
+    margin-right:16px;
+    background-color: white;
+    color: #078080 ;
+    padding:0;
+
+}
+.editDelete button:hover{
+    color: #056b6b;
+
+}
+.username{
+    display:flex;
+
+}
+
+.username *{
+    color: #078080 ;
+    font-size:14px;
+    margin: 0;
+    margin-top:-5px;
+}
+

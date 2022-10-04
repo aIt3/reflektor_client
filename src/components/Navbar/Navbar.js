@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { AuthContext } from "./../../context/auth.context";  
 
 function Navbar(){
-    const { isLoggedIn, user } = useContext(AuthContext);   // <== ADD
+    const { isLoggedIn, user, logOutUser } = useContext(AuthContext);   // <== ADD
 
     return(
        <header>
@@ -24,8 +24,8 @@ function Navbar(){
             <ul>
             {isLoggedIn && (
                 <>
-                <Link to="/Profile"> Profile </Link>
-                <button>Logout</button>
+                <Link to="/Profile"> {user.username} </Link>
+                <button onClick={logOutUser} >Logout</button>
                 </>
             )}
             {!isLoggedIn && (
