@@ -8,8 +8,21 @@ const API_URL = "http://localhost:5005";
 function InputWindow(){
     const [answer, setAnswer] = useState('')
     const [question, setQuestion] = useState('')
-    console.log(question)
     const storedToken = localStorage.getItem('authToken')
+    let questionId
+    let questionOfTheDay
+    let questionType
+    
+
+    if(question!== ''){
+        questionId = question[0]._id
+        questionOfTheDay = question[0].question
+        questionType = question[0].questionType
+    }
+
+    console.log(question)
+    
+
 
     const navigate = useNavigate();
 
@@ -20,7 +33,7 @@ function InputWindow(){
     const handlePost = e => {
         e.preventDefault();
 
-        const requestBody = { answer };
+        const requestBody = { answer, questionId}
      
         axios.post(`${API_URL}/api/answers`, requestBody,
         {headers: {Authorization: `Bearer ${storedToken}`}}
@@ -47,17 +60,29 @@ function InputWindow(){
 
     return(
         <div className='wrapper'>
-            <div className='question'>
-                <h1>{question[0].question}</h1>
+            <div className='inputQuestion'>
+                <h1>{questionOfTheDay}</h1>
             </div>
-            <form onSubmit={handlePost}>
+            <form className="answerForm" onSubmit={handlePost}>
+            {questionType === 'text' && (
                 <textarea  
                     type="text"
                     name="answer"
                     value={answer}
                     onChange={handleAnswer} 
-                    placeholder="Drop some lines ... " 
+                    placeholder="Drop a text ... " 
                 ></textarea>
+                )}
+                {questionType === 'link' && (
+                <textarea  
+                    type="text"
+                    name="answer"
+                    value={answer}
+                    onChange={handleAnswer} 
+                    placeholder="Drop a link ... " 
+                ></textarea>
+                )}
+
                 <div className='buttonWrapper'>
                     <button type="submit" >Post</button>
                 </div>

@@ -1,0 +1,31 @@
+.pastViewWrapper{
+    width:1440px;
+    height:500px;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.monthWrapper{
+    display:flex;
+    flex-direction: row;
+}
+.pastQuestion{
+    display:flex;
+    text-align: left;
+    margin-top:0;
+    margin-bottom:16px;
+    color:#0D0D0D;
+}
+.date{
+    text-align: left;
+    margin-bottom: 8px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color:#0d0d0db6;
+}
+.answerWrapper{
+    width:100%;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
