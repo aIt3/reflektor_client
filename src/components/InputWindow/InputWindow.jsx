@@ -6,6 +6,7 @@ import './InputWindow.css'
 const API_URL = "http://localhost:5005";
 
 function InputWindow(){
+
     const [answer, setAnswer] = useState('')
     const [question, setQuestion] = useState('')
     const storedToken = localStorage.getItem('authToken')
@@ -34,12 +35,14 @@ function InputWindow(){
         e.preventDefault();
 
         const requestBody = { answer, questionId}
-     
-        axios.post(`${API_URL}/api/answers`, requestBody,
+     console.log(requestBody)
+        axios.post(`${process.env.REACT_APP_API_URL}/api/answers`, requestBody,
         {headers: {Authorization: `Bearer ${storedToken}`}}
         )
           .then((response) => {
-            navigate('/');
+            console.log(response)
+            setAnswer('')
+            getTodaysQuestion()
           })
           .catch((error) => {
             const errorDescription = error.response.data.message;
@@ -50,7 +53,7 @@ function InputWindow(){
     // GET THE QUESTION OF THE DAY
     const getTodaysQuestion = () => { 
         axios
-          .get(`${API_URL }/api/questions/today`)
+          .get(`${process.env.REACT_APP_API_URL}/api/questions/today`)
           .then((response) => setQuestion(response.data))
           .catch((error) => console.log(error));
       };
@@ -84,7 +87,7 @@ function InputWindow(){
                 )}
 
                 <div className='buttonWrapper'>
-                    <button type="submit" >Post</button>
+                    <button className="postButton" type="submit" >Post</button>
                 </div>
             </form>
 

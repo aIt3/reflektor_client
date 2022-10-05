@@ -16,7 +16,7 @@ function DayView(){
 
     const getAllAnswers = () => { 
         axios
-          .get(`${API_URL }/api/allAnswersByUser`)
+          .get(`${process.env.REACT_APP_API_URL}/api/allAnswersByUser`)
           .then((response) => setAnswers(response.data))
           .catch((error) => console.log(error));
       };
@@ -31,7 +31,7 @@ function DayView(){
 
       const deletePost = (key) => {
         axios  
-         .delete(`${API_URL }/api/answers/delete/${key}`)
+         .delete(`${process.env.REACT_APP_API_URL}/api/answers/delete/${key}`)
          .then((response) => {
             navigate('/')
          })

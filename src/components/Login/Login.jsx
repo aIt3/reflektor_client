@@ -22,7 +22,7 @@ function Login () {
         e.preventDefault();
         const requestBody = { email, password };
         
-        axios.post(`${API_URL}/auth/Login`, requestBody)
+        axios.post(`${process.env.REACT_APP_API_URL}/auth/Login`, requestBody)
           .then((response) => {
 
             storeToken(response.data.authToken);  

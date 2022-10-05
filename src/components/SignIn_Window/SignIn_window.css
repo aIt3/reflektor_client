@@ -51,7 +51,7 @@ label {
     margin-bottom:8px;
     text-align: left;
 }
-button{
+.signInButton{
     letter-spacing: 0.5px;
     text-transform: uppercase;
     height:48px;
