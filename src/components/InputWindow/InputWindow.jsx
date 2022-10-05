@@ -54,6 +54,7 @@ function InputWindow(){
         axios({
             method: "get",
             url: process.env.REACT_APP_API_URL + "api/questions/today",
+            headers: {"Access-Control-Allow-Origin": "*"}
         })
           //.get(`${process.env.REACT_APP_API_URL}/api/questions/today`)
           .then((response) => setQuestion(response.data))
