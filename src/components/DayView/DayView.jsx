@@ -6,7 +6,6 @@ import Answer from "../Answer/Answer";
 
 import './DayView.css'
 
-const API_URL = "http://localhost:5005";
 
 function DayView(){
     const [answers, setAnswers] = useState([])

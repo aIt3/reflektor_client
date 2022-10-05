@@ -5,7 +5,6 @@ import Answer from "../components/Answer/Answer";
 
 
 function Profile(){
-    const API_URL = 'http://localhost:5005'
 
     const [profile, setProfile] = useState(null); 
     const { profileId } = useParams();

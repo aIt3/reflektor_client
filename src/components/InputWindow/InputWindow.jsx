@@ -3,7 +3,6 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import './InputWindow.css'
 
-const API_URL = "http://localhost:5005";
 
 function InputWindow(){
 

@@ -7,7 +7,6 @@ import Answer from "../Answer/Answer";
 import axios from "axios";
 import './PastView.css'
 
-const API_URL = "http://localhost:5005";
 
 function PastView (){
     const [questions, setQuestions] = useState([])

@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import './Answer.css'
 
-const KEY = 'ddcad69b1e1144f80dce6b33e6ff7364';
 
 function Answer(props) {
 
@@ -17,7 +16,7 @@ function Answer(props) {
                     fetch(
           `https://cdn.iframe.ly/api/iframely?url=${encodeURIComponent(
             props.answer
-          )}&key=${KEY}&iframe=1&omit_script=1`
+          )}&key=${process.env.REACT_APP_API_KEY}&iframe=1&omit_script=1`
         )
           .then((res) => res.json())
           .then(
