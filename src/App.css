@@ -30,8 +30,7 @@
   color: #61dafb;
 }
 .backgroundImage{
-  background-color: antiquewhite;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.02)) , url('./assets/images/Nature_Study_Habelt.jpg');
+  background-color: #0D0D0D;
   background-repeat: no-repeat;
   background-size: cover;
   height:100vh;

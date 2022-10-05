@@ -14,14 +14,14 @@ function DayView(){
     const { answerId } = useParams(); // 2. Getting the projectId
     const navigate = useNavigate()
 
-    const getAllAnswers = () => { //4.Fetch all projects and update state variable
+    const getAllAnswers = () => { 
         axios
           .get(`${API_URL }/api/allAnswersByUser`)
           .then((response) => setAnswers(response.data))
           .catch((error) => console.log(error));
       };
 
-    useEffect(() => { // 3. useEffect will execute getAllProjects()
+    useEffect(() => { 
         getAllAnswers();
       }, [] );
 
@@ -49,7 +49,7 @@ function DayView(){
                             </Link>
                                 <button onClick={() => deletePost(answer._id)}>Delete</button>
                         </div>
-                    <Answer className="answerbox" answer = {answer.answer}/>
+                    <Answer key = {answer.id} className="answerbox" answer = {answer.answer}/>
                     <div className="username">
                         <Link>
                             {answer.postedByUser?.username && <p className="postedBy">posted by {answer.postedByUser.username}</p>}

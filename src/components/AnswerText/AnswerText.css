@@ -1,0 +1,9 @@
+.answerText{
+    word-wrap: break-word;
+    font-family: Inter;
+    font-size: 14px
+}
+.answerText p{
+    padding:8px 8px;
+    line-height:1.3;
+}

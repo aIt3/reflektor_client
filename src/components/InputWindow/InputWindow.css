@@ -1,53 +1,57 @@
 .wrapper{
     width:100vw;
-    height:100vh;
+    height:85vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.question{
-    width: 55vw;
+.inputQuestion{
+    width: 1440px;
     margin:40px 0px;
    
 }
-.question h1{
+.inputQuestion h1{
     font-family: 'Merriweather', serif;
     color:#f8f5f2;
     font-weight: bolder;
-    font-size: 72px;
+    font-size: 32px;
+    margin:0;
 
 }
-form{
-    background-color: #fffffe;
-    width: 40vw;
-    height:300px;
+.answerForm{
+    background-color: #0D0D0D;
+    border: 1px solid #FEFEFE;
+    width: 1024px;
+    height:50vh;
     border-radius: 25px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-    padding: 40px 20px;
+    padding: 24px 16px;
 
 }
-form textarea{
-    padding:30px 30px;
-    width: 85%;
+.answerForm textarea{
+    padding:24px 16px;
+    width: 95%;
     height:100%;
     border: none;
     outline:none;
     resize: none;
     font-family: 'Inter', sans-serif;
     color: #959797;
+    background-color: #0D0D0D;
     font-size:18px;
     font-weight: 400;
     line-height:1.5;
 }
 .buttonWrapper{
-    width:85%;
+    width:95%;
     display: flex;
     justify-content: flex-end;
 }
 button{
     width:150px;
-    background-color: #078080;
+    background-color: #FEFEFE;
+    color:#0D0D0D;
     font-family: 'Inter', sans-serif;
     font-weight: 800;
     letter-spacing: 1.3px;
@@ -56,6 +60,6 @@ button{
     
 }
 button:hover{
-    background-color: #056b6b;
+    background-color: #dddddd;
 
 }

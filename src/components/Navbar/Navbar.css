@@ -5,12 +5,15 @@ header {
     justify-content: center;
     padding: 10px 18px;
     box-shadow: 0 1px 8px #ddd;
+    background-color: #0D0D0D;
+    border-bottom:1px solid #FEFEFE;
+    
 }
-.navWrapper{
-    display: flex;
-    /* 1440px */
-    width:1920px;
 
+.centered{
+    display: flex;
+    width: 1024px;
+    justify-content: center;
 }
 .logo{
     display: flex;
@@ -18,19 +21,19 @@ header {
     align-items: center;
 }
 .logo *:hover{
-    stroke:#056b6b;
-    color:#056b6b;
+    stroke:#FEFEFE;
+    color:#FEFEFE;
 }
 .logo svg {
     margin-right:2px;
 }
 .logo svg path{
-    stroke:#078080;
+    stroke:#FEFEFE;
 }
 h1{
     font-family: 'Inter', sans-serif;
     font-size: 32px;
-    color:#078080;
+    color:#FEFEFE;
     text-decoration: none;
     
 }
