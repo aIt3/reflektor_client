@@ -16,8 +16,10 @@ function PastView (){
 
 
     const getPastQuestions = () => { 
-        axios
-          .get(`${process.env.REACT_APP_API_URL}/api/questions/pastdays`)
+          axios({
+            method: "get",
+            url: process.env.REACT_APP_API_URL + "api/questions/pastDay",
+        })
           .then((response) => setQuestions(response.data))
           .catch((error) => console.log(error));
       };
