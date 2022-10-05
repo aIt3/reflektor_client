@@ -51,8 +51,11 @@ function InputWindow(){
     
     // GET THE QUESTION OF THE DAY
     const getTodaysQuestion = () => { 
-        axios
-          .get(`${process.env.REACT_APP_API_URL}/api/questions/today`)
+        axios({
+            method: "get",
+            url: `${process.env.REACT_APP_API_URL}/api/questions/today`,
+        })
+          //.get(`${process.env.REACT_APP_API_URL}/api/questions/today`)
           .then((response) => setQuestion(response.data))
           .catch((error) => console.log(error));
       };
