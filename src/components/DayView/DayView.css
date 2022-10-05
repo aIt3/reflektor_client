@@ -6,14 +6,15 @@
     flex-direction: row;
 }
 .editDelete{
-    width:210px;
+    width:215px;
+    height:40px;
     display: flex;
     justify-content: flex-end;
 
 }
 
 
-.editDelete button{
+.editDelete deleteButton{
     width:30px;
     font-size:11px;
     margin-right:16px;
@@ -22,7 +23,7 @@
     padding:0;
 
 }
-.editDelete button:hover{
+.editDelete deleteButton:hover{
     color: #056b6b;
 
 }

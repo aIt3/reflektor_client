@@ -48,7 +48,7 @@
     display: flex;
     justify-content: flex-end;
 }
-button{
+.postButton{
     width:150px;
     background-color: #FEFEFE;
     color:#0D0D0D;
@@ -59,7 +59,7 @@ button{
 
     
 }
-button:hover{
+.postButton:hover{
     background-color: #dddddd;
 
 }

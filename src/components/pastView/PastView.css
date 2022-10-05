@@ -29,3 +29,9 @@
     flex-wrap: wrap;
     flex-direction: row;
 }
+.deleteButton{
+    border:none;
+    background-color:#FFFFFF;
+    color:#0d0d0db6;
+
+}

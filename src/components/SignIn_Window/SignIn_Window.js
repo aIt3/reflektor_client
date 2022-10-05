@@ -24,7 +24,7 @@ function SignIn_Window(){
         // Make an axios request to the API
         // If POST request is successful redirect to login page
         // If the request resolves with an error, set the error message in the state
-        axios.post(`${API_URL}/auth/signup`, requestBody)
+        axios.post(`${process.env.REACT_APP_API_URL}/auth/signup`, requestBody)
           .then((response) => {
             navigate('/login');
           })
@@ -70,7 +70,7 @@ function SignIn_Window(){
                             placeholder="*******"
                         />
 
-                        <button type="submit" >Sign Up</button>
+                        <button className="signInButton" type="submit" >Sign Up</button>
 
                     </form>    
                     </div>
