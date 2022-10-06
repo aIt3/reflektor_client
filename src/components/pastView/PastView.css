@@ -1,9 +1,22 @@
-.pastViewWrapper{
-    width:1440px;
-    height:500px;
+.pastViewBg{
+    background-color: #FFFEF2;
+    width:100%;
     display:flex;
     justify-content: center;
+}
+.pastViewWrapper{
+    width:1440px;
+    display:flex;
+    justify-content: center;
+    align-content: center;
     flex-direction: column;
+}
+.pastViewWrapper h1{
+    font-family: 'Merriweather', serif;
+    color:#1E1E1E;
+    border-bottom: 1px solid #1E1E1E;
+    padding-bottom:16px;
+    font-weight:300;
 }
 .monthWrapper{
     display:flex;
@@ -14,14 +27,21 @@
     text-align: left;
     margin-top:0;
     margin-bottom:16px;
-    color:#0D0D0D;
+    color:#FFFEF2;
+}
+.oneDay{
+    margin-top:40px;
+    margin-bottom:40px;
+    ;
 }
 .date{
     text-align: left;
     margin-bottom: 8px;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
-    color:#0d0d0db6;
+    color:#1e1e1eb6;
+    font-size: 16px;
+    width:95px;
 }
 .answerWrapper{
     width:100%;
@@ -31,7 +51,35 @@
 }
 .deleteButton{
     border:none;
-    background-color:#FFFFFF;
-    color:#0d0d0db6;
+    background-color:#FFFEF2;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    color:#ED3D59;
+    cursor: pointer;
+
+}
+.deleteButton:hover{
+    color:#db1b3b;
+
+}
+.username{
+    display:flex;
+    justify-content: flex-end;
+    color:#FFFEF2;
+    width:215px;
+}
+.postedBy{
+    color:#1E1E1E;
+}
+.postedByUsername{
+    text-decoration:none;
+    padding:2px 8px;
+    background-color: #ED3D59;
+    border-radius: 25px;
+    margin-left:8px;
+    color:#FFFEF2;
+}
+.postedByUsername:hover{
+    background-color:#db1b3b;
 
 }

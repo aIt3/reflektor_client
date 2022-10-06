@@ -5,35 +5,30 @@ header {
     justify-content: center;
     padding: 10px 18px;
     box-shadow: 0 1px 8px #ddd;
-    background-color: #0D0D0D;
-    border-bottom:1px solid #FEFEFE;
+    background-color: #FFFEF1;
+    border-bottom:1px solid #1E1E1E;
     
 }
 
 .centered{
-    display: flex;
-    width: 1024px;
-    justify-content: center;
+    
 }
 .logo{
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.logo *:hover{
-    stroke:#FEFEFE;
-    color:#FEFEFE;
-}
+
 .logo svg {
     margin-right:2px;
 }
 .logo svg path{
-    stroke:#FEFEFE;
+    stroke:#1E1E1E;
 }
 h1{
     font-family: 'Inter', sans-serif;
     font-size: 32px;
-    color:#FEFEFE;
+    color:#1E1E1E;
     text-decoration: none;
     
 }
@@ -42,25 +37,59 @@ a{
     
 
 }
-nav{
+.logoutButton{
+    background-color: #FFFEF1;
+    border:none;
+    font-family: 'Inter', sans-serif;
+    font-weight:600;
+    font-size:16px;
+    font-family: inter;
+    color:#1E1E1E;
+    border-bottom:1px solid #1E1E1E;
+    padding-bottom:8px;
+    cursor: pointer;
+
+}
+.logoutButton:hover{
+    color:#db1b3b;
+    border-bottom:1px solid #db1b3b;
+}
+.navLinks{
+    display: flex;
+    align-items: center;
+    width:1440px;
+   
+}
+.right{
     width:100%;
     display: flex;
     justify-content: flex-end;
-    align-items: center;
-    z-index:2;
 }
 nav ul Link{
     list-style: none;
     display: inline-block;
     text-transform: capitalize;
+    border-bottom:1px solid #1E1E1E;
 
+
+
+}
+nav ul Link:hover{
+    color:#db1b3b;
+    border-bottom:1px solid #db1b3b;
 }
 nav ul a{
     margin-right:20px;
     font-family: 'Inter', sans-serif;
-    color:#078080;
+    color:#1E1E1E;
     font-weight: 600;
+    border-bottom:1px solid #1E1E1E;
+    padding-bottom:8px;
 
+}
+nav ul a:hover{
+    color:#db1b3b;
+    border-bottom:1px solid #db1b3b;
 }
 
 #appLogo{

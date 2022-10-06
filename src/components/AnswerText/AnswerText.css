@@ -1,9 +1,18 @@
 .answerText{
-    word-wrap: break-word;
     font-family: Inter;
-    font-size: 14px
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    word-wrap: break-word;
+
+
 }
 .answerText p{
     padding:8px 8px;
     line-height:1.3;
+    margin:0;
+    width:90%;
+
+    
 }

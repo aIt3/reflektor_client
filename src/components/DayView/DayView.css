@@ -7,9 +7,10 @@
 }
 .editDelete{
     width:215px;
-    height:40px;
+    height:24px;
     display: flex;
     justify-content: flex-end;
+    margin-bottom:8px;
 
 }
 

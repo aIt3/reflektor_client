@@ -2,6 +2,7 @@ import axios from "axios";
 import { useParams } from "react-router-dom"
 import { useState, useEffect } from 'react'
 import Answer from "../components/Answer/Answer";
+import Navbar from "../components/Navbar/Navbar";
 
 
 function Profile(){
@@ -27,16 +28,23 @@ function Profile(){
 
     return(
         <div>
-        <div>
-            {profile && (
-            <p>{profile.username}</p>
-            )}  
-        </div>
-        <div>
-        {profile.answersByUsers && (
-            <Answer key = {profile.id} className="answerbox" answer = {profile}/>
-            )} 
-        </div>
+             <Navbar />
+            <div className="backgroundImage">
+                {profile && (
+                <div className="userProfile">
+                    <div className="userName">
+                        {profile.username}
+                    </div>
+                        <div className="monthWrapper center">
+                            {profile.answersByUsers.map((answer => {
+                                return(
+                                    <Answer key = {answer._id} className="answerbox" answer = {answer.answer}/>
+                                )
+                            }))}
+                        </div>  
+            </div>
+            )}
+            </div>
         </div>
     )
 }

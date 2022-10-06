@@ -30,9 +30,27 @@
   color: #61dafb;
 }
 .backgroundImage{
-  background-color: #0D0D0D;
+  background-color: #FFFEF1;
   background-repeat: no-repeat;
   background-size: cover;
   height:100vh;
+}
+.userProfile{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top:48px;
+  width:1440px;
+  margin: 0 auto;
+}
+.userName{
+  font-family: Inter;
+  font-size:24px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+.center{
+  display:flex;
+  justify-content: center;
 }
 

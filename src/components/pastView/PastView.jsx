@@ -15,12 +15,10 @@ function PastView (){
     const navigate = useNavigate()
 
 
+
     const getPastQuestions = () => { 
-          axios({
-            method: "get",
-            url: process.env.REACT_APP_API_URL + "api/questions/pastdays",
-            headers: {"Access-Control-Allow-Origin": "*"}
-        })
+        axios
+          .get(`${process.env.REACT_APP_API_URL}/api/questions/pastdays`)
           .then((response) => setQuestions(response.data))
           .catch((error) => console.log(error));
       };
@@ -36,10 +34,11 @@ function PastView (){
          })
       }
     return(
+      <div className="pastViewBg">
         <div className="pastViewWrapper">
           {questions.map((past => {
             return(
-              <div>
+              <div className="oneDay">
                 <h3 className="date">{past.date}</h3>
               <h1 className="pastQuestion"key={past._id}>{past.question}</h1>
               <div className="monthWrapper">
@@ -50,13 +49,19 @@ function PastView (){
                             {/* <Link to={`/answers/edit/${answer._id}`}>
                                 <button>Edit</button>
                             </Link> */}
+                            {user && (
+                              <div>
                             {answer.postedByUser._id === user._id && (
+                              <div>
                                  <button className="deleteButton" onClick={() => deletePost(answer._id)}>Delete</button>
+                                 </div>
+                                 )}
+                                  </div>
                                  )}
                         </div>
                 <div className="answerWrapper">
                 {past.questionType === 'link' && 
-                <Answer key = {past.id} className="answerbox" answer = {answer.answer}/>
+                <Answer key = {past._id} className="answerbox" answer = {answer.answer}/>
                 }
                 {past.questionType === 'text' && 
                 <AnswerText answer={answer.answer}/>
@@ -65,10 +70,16 @@ function PastView (){
 
             
                 </div>
-                <div className="username">
-                <Link to={`/Profile/${answer.postedByUser}`}>
-                    {answer.postedByUser && <p className="postedBy">posted by {answer.postedByUser.username}</p>}
-                </Link>
+                <div>
+                    {answer.postedByUser && 
+                    <div className="username">
+                    <p className="postedBy">posted by </p>
+                    <Link className="postedByUsername"to={`/Profile/${answer.postedByUser._id}`}>
+                    {answer.postedByUser.username}
+                    </Link>
+
+                    </div>
+                    }
             </div>
             </div>
                 )
@@ -79,6 +90,7 @@ function PastView (){
 
               )
             }))}             
+        </div>
         </div>
 
     )
