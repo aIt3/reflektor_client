@@ -86,6 +86,7 @@
     width:144px;
     height:48px;
     border-radius: 25px;
+    transition: background-color 250ms;
 }
 .postButton .postIcon{
         height: 20px;
@@ -97,11 +98,20 @@
     background-color: #dddcc9;
     cursor:not-allowed;
     pointer-events: none;
+    transition: background-color 250ms;
+
 }
 .postButton:hover{
     background-color: #db1b3b;
     cursor: pointer;
 }
+.postButton:focus{
+   background-color: #2c514c;
+   transition: background-color 250ms;
+
+}
 .done{
     background-color:#2c514c;
+    pointer-events: none;
+
 }

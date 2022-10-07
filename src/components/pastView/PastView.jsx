@@ -8,20 +8,11 @@ import axios from "axios";
 import './PastView.css'
 
 
-function PastView (){
-    const [questions, setQuestions] = useState([])
+function PastView ({getPastQuestions, questions}){
     const { user } = useContext(AuthContext);
 
     const navigate = useNavigate()
 
-
-
-    const getPastQuestions = () => { 
-        axios
-          .get(`${process.env.REACT_APP_API_URL}/api/questions/pastdays`)
-          .then((response) => setQuestions(response.data))
-          .catch((error) => console.log(error));
-      };
       useEffect(() => { 
         getPastQuestions();
       }, [] );

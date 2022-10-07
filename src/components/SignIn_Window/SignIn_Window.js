@@ -38,8 +38,8 @@ function SignIn_Window(){
             <div className="window">
                 <div className="content">
                     <div className='text'>
-                        <h2>Lorem ipsum dolor sit amet, consetetur sadipscing </h2>
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </p>
+                        <h2 className='heading'>Lorem ipsum dolor sit amet, consetetur sadipscing </h2>
+                        <p className='explanation'>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </p>
                     </div>
                     <form onSubmit={handleSignupSubmit}>
                         <label>Your E-Mail</label>
@@ -69,7 +69,7 @@ function SignIn_Window(){
                             placeholder="*******"
                         />
 
-                        <button className="signInButton" type="submit" >Sign Up</button>
+                        <button className="postButton" type="submit" >Sign Up</button>
 
                     </form>    
                     </div>

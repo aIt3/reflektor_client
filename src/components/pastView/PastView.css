@@ -21,6 +21,7 @@
 .monthWrapper{
     display:flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 .pastQuestion{
     display:flex;

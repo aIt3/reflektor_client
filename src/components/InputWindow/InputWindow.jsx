@@ -3,11 +3,12 @@ import { Link, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../context/auth.context";
 
+
 import axios from "axios";
 import './InputWindow.css'
 
 
-function InputWindow(){
+function InputWindow({getPastQuestions}){
 
     const [answer, setAnswer] = useState('')
     const [question, setQuestion] = useState('')
@@ -19,6 +20,7 @@ function InputWindow(){
     let questionType
     let questionDate
 
+    console.log()
 
     
 
@@ -45,7 +47,8 @@ function InputWindow(){
 
         if(button === false){
             setButton(true)
-
+            getPastQuestions()
+            
         const requestBody = { answer, questionId}
         axios.post(`${process.env.REACT_APP_API_URL}/api/answers`, requestBody,
         {headers: {Authorization: `Bearer ${storedToken}`}}

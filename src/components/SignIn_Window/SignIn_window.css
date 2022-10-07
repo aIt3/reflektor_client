@@ -21,6 +21,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #FFFEF1;
 }
 .text {
     width:400px;

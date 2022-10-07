@@ -17,7 +17,7 @@ function Answer(props) {
                     fetch(
           `https://cdn.iframe.ly/api/iframely?url=${encodeURIComponent(
             props.answer
-          )}&key=${KEY}&iframe=1&omit_script=1`
+          )}&key=${KEY}&iframe=1&omit_script=1&omit_css=1`
         )
           .then((res) => res.json())
           .then(

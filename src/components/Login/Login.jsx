@@ -2,6 +2,7 @@ import { useState, useContext } from "react"; // <== IMPORT useContext
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "./../../context/auth.context";  
+import './Login.css'
 
  
 
@@ -38,8 +39,8 @@ function Login () {
                 <div className="window">
                     <div className="content">
                         <div className='text'>
-                            <h2>Lorem ipsum dolor sit amet, consetetur sadipscing </h2>
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </p>
+                            <h1 className="heading">Lorem ipsum dolor sit amet, consetetur sadipscing </h1>
+                            <p className="explanation">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </p>
                         </div>
                         <form onSubmit={handleLoginSubmit}>
                             <label>Your E-Mail</label>
@@ -59,7 +60,7 @@ function Login () {
                                 onChange={handlePassword}
                                 placeholder="*******"
                             />
-                            <button type="submit" >Login</button>
+                            <button className="postButton" type="submit" >Login</button>
                         </form>  
                         { errorMessage && <p className="error-message">{errorMessage}</p> }  
                         </div>

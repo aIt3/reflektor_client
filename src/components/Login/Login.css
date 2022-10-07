@@ -1,0 +1,14 @@
+body{
+    background-color:#FFFEF1;
+}
+.heading{
+    font-family: 'Merriweather', serif;
+    color:#1E1E1E;
+    font-weight: bolder;
+    font-size: 32px;
+    margin:0;
+}
+.explanation{
+    ont-weight: 300;
+    font-family: 'Inter', sans-serif;
+}
